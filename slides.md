@@ -1,5 +1,5 @@
 ---
-theme: seriph
+theme: default
 class: 'text-center'
 lineNumbers: false
 transition: slide-left
@@ -8,6 +8,7 @@ css: unocss
 ---
 # just one thing after n-other
 
+## fastest mario
 ---
 split: start
 ---

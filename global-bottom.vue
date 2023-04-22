@@ -2,7 +2,7 @@
 import { watch } from 'vue'
 const splits = {
   "intro": {"name": "Intro", "icon": "mdi-home", "time": null, "splitDiff": -5.4},
-  "speedrun": {"name": "Speedrunning", "icon": "mdi-run", "time": null}
+  "speedrun": {"name": "Speedrunning", "icon": "mdi-run", "time": null},
 }
 const formatTimeMs = (time) => {
   const date = new Date(time)
@@ -51,6 +51,15 @@ watch($slidev.nav, () => {
 </script>
 <template>
   <div id="livesplit">
+    <div id="livesplittitle">
+      <div id="title-left">
+        <img src="./images/icon.png">
+      </div>
+      <div id="title-right">
+        <div>DjangoCon Europe Keynote</div>
+        <div>100% 2023 No Major Glitches</div>
+      </div>
+    </div>
     <table id="splitlist">
       <tr v-for="split in Object.values(splits)" :key="split.name" class="split">
         <td>
@@ -74,16 +83,15 @@ watch($slidev.nav, () => {
     <div id="timer">
       <span id="timerbig">{{ formatTime(timer) }}</span><span id="timersmall">.{{ formatTimeMs(timer) }}</span>
     </div>
-    {{ $slidev.nav.route.meta.split }}
   </div>
 </template>
 <style scoped>
 #livesplit {
   position: fixed;
-  top:0;
+  bottom:0;
   right: 0;
   z-index: 1000;
-  color: red;
+  color: white;
   background-color: rgba(0,0,0,0.8);
   font-family: sans-serif;
 }
@@ -95,6 +103,29 @@ watch($slidev.nav, () => {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   width: 300px;
+}
+#livesplittitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0) 100%);
+  #title-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    img {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+  }
+  #title-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 #splitlist {
   width: 100%;
