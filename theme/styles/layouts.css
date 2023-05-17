@@ -1,3 +1,12 @@
+.slidev-presenter {
+  .grid-section.top img { display: none }
+  .note .prose {
+    font-size: 2em;
+  }
+  .grid-container {
+    grid-template-columns: 1fr 1fr 2fr !important;
+  }
+}
 .slidev-layout {
   h1 + p {
     @apply -mt-2 opacity-50 mb-4;
