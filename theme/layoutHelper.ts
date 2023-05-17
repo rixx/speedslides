@@ -10,6 +10,7 @@ export function resolveAssetUrl(url: string) {
 }
 
 export function handleBackground(background?: string, dim = false): CSSProperties {
+  console.log(background)
   const isColor = background && ['#', 'rgb', 'hsl'].some(v => background.indexOf(v) === 0)
 
   const style = {
@@ -22,8 +23,8 @@ export function handleBackground(background?: string, dim = false): CSSPropertie
     backgroundImage: isColor
       ? undefined
       : background
-        ? dim
-          ? `linear-gradient(#0005, #0008), url(${resolveAssetUrl(background)})`
+        ? (dim || true)
+          ? `linear-gradient(#000c, #000c), url(${resolveAssetUrl(background)})`
           : `url("${resolveAssetUrl(background)}")`
         : undefined,
     backgroundRepeat: 'no-repeat',

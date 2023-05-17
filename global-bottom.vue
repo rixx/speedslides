@@ -29,28 +29,37 @@ const formatTimeFull = (time) => {
 let startTime = null
 let timer = $ref(0)
 let timerMode = "stop"
+let timerState = $ref("hidden")
 setInterval(() => {
   if (timerMode == "stop") return
   timer = Date.now() - startTime
 }, 10)
 watch($slidev.nav, () => {
+  console.log($slidev.nav.route.meta.split)
   if ($slidev.nav.route.meta.split == "reset") {
     startTime = Date.now()
+    timer = 0
     for (const split of Object.values(splits)) {
       split.time = null
     }
+    timerMode = "stop"
   } else if ($slidev.nav.route.meta.split == "stop") {
     timerMode = "stop"
+  } else if ($slidev.nav.route.meta.split == "show") {
+    timerState = "visible"
+    startTime = Date.now()
   } else if ($slidev.nav.route.meta.split == "start") {
+    timerState = "visible"
     timerMode = "start"
     startTime = Date.now()
   } else if ($slidev.nav.route.meta.split) {
     splits[$slidev.nav.route.meta.split].time = Date.now() - startTime
   }
+  console.log(timerState)
 })
 </script>
 <template>
-  <div id="livesplit">
+  <div id="livesplit" :class="timerState">
     <div id="livesplittitle">
       <div id="title-left">
         <img src="./images/icon.png">
@@ -94,6 +103,9 @@ watch($slidev.nav, () => {
   color: white;
   background-color: rgba(0,0,0,0.8);
   font-family: sans-serif;
+}
+#livesplit.hidden {
+  visibility: hidden;
 }
 #timer {
   font-size: 1.7em;
@@ -143,5 +155,11 @@ watch($slidev.nav, () => {
 }
 #timersmall {
   font-size: 1.2em;
+}
+
+
+
+.slidev-page {
+  filter: brightness(0.1) !important;
 }
 </style>
