@@ -2,7 +2,7 @@
 import { watch } from 'vue'
 const splits = {
   "intro": {"name": "Intro", "icon": "mdi-home", "time": null, "splitDiff": -5.4},
-  "speedrun": {"name": "Speedrunning", "icon": "mdi-run", "time": null},
+  "definition": {"name": "Speedrunning", "icon": "mdi-run", "time": null},
 }
 const formatTimeMs = (time) => {
   const date = new Date(time)
@@ -95,6 +95,11 @@ watch($slidev.nav, () => {
   </div>
 </template>
 <style scoped>
+@font-face {
+ font-family:timer;
+ font-display:swap;
+ src:url(/font.woff)
+}
 #livesplit {
   position: fixed;
   bottom:0;
@@ -150,15 +155,16 @@ watch($slidev.nav, () => {
 .split:nth-child(2n) {
   background-color: rgba(255, 255, 255, 0.08);
 }
+#timer {
+  font-family: "timer";
+  font-weight: normal;
+}
 #timerbig {
   font-size: 2em;
 }
 #timersmall {
   font-size: 1.2em;
 }
-
-
-
 .slidev-page {
   filter: brightness(0.1) !important;
 }
