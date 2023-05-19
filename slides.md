@@ -1,7 +1,7 @@
 ---
 theme: ./theme
 lineNumbers: false
-background: ./images/00-test-pattern.jpg
+background: ./public/images/00-test-pattern.jpg
 split: stop
 title: testing, testing, is this thing on?
 ---
@@ -14,7 +14,7 @@ Setup. Remember your feet. Remember your larynx
 
 ---
 split: reset
-background: ../images/01-title-mario.jpg
+background: ./public/images/01-title-mario.jpg
 layout: cover
 ---
 
@@ -30,12 +30,12 @@ Thank you for the introduction. Let me be one of the first to welcome you to …
 … oh wait, one more setup thing.
 
 
-second time: click through
+**second time**: click through
 
 -->
 ---
 split: show
-background: ../images/01-title-mario.jpg
+background: ./public/images/01-title-mario.jpg
 layout: cover
 ---
 # just one thing after n-other
@@ -50,17 +50,19 @@ layout: cover
 … right. Okay. Everybody ready? Then let's talk about speedrunning.
 
 
-second time: Thank you, ___, for the introduction, and welcome, everybdoy, to DjangoCon Europe!
+**second time**: Thank you, ___, for the introduction, and welcome, everybdoy, to DjangoCon Europe!
 
 -->
 ---
 split: start
 layout: speedimage
-background: ./images/01-title-mario.jpg
+background: /images/django_logo.svg
 ---
 ## Credentials
 
-rixx.de
+<v-click><img src="/images/pretalx_logo.svg" style="width: 25%"></v-click>
+<v-click><img src="/images/djangocon_logo.svg" style="width:25%"></v-click>
+<v-click><img src="/images/rixx.de.svg" style="width:25%"></v-click>
 
 <!--
 [timer starts running]
@@ -74,7 +76,7 @@ with some people you'll also see on stage here. I also dislike talking about mys
 moving on,
 
 
-second time: I am your keynote speaker today, and if you want to know more, uhm, check rixx.de and a bunch of related
+**second time**: I am your keynote speaker today, and if you want to know more, uhm, check rixx.de and a bunch of related
 sub-pages.
 
 -->
@@ -102,11 +104,11 @@ oh. okay, in that case we can go a bit faster, I think. Let's try that again:
 
 
 
-second time: speedrunning is rigorously defined as playing games really fast, or rather, with the intent to reach a set
+**second time**: speedrunning is rigorously defined as playing games really fast, or rather, with the intent to reach a set
 objective as fast as possible.
 -->
 ---
-split: intro
+split: definition
 ---
 
 # slide
