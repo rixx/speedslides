@@ -6,13 +6,29 @@ const props = defineProps({
   background: {
     default: '',
   },
+  imageWidth: {
+    type: String,
+    default: null,
+  },
+  imageRepeat: {
+    type: Number,
+    default: null,
+  },
+  imageOrientation: {
+    type: String,
+    default: null,
+  },
+  dim: {
+    type: Boolean,
+    default: true,
+  },
 })
 
-const style = computed(() => handleBackground(props.background, true))
+const style = computed(() => handleBackground(props.background, props.dim, props.imageWidth, props.imageRepeat, props.imageOrientation))
 </script>
 
 <template>
-  <div class="slidev-layout" :style="style">
+  <div class="slidev-layout speedimage" :style="style">
     <div class="my-auto w-full">
       <slot />
     </div>

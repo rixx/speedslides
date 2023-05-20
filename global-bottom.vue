@@ -3,13 +3,13 @@ import { watch } from 'vue'
 const splits = {
   "intro": {"name": "Intro", "icon": "mdi-home", "time": null, "splitDiff": -5.4},
   "definition": {"name": "Speedrunning", "icon": "mdi-run", "time": null},
-  "rules": {"name": "Rules and frameworks", "icon": "mdi-run", "time": null},
+  "rules": {"name": "Rules", "icon": "mdi-run", "time": null},
   "similarities": {
     "name": "Similarities",
     "icon": "mdi-run",
     "time": null,
     "subsplits": {
-      "open": {"name": "Work in public, play in public", "icon": "mdi-run", "time": null},
+      "open": {"name": "Work in public", "icon": "mdi-run", "time": null},
       "experts": {"name": "Don't ask to ask", "icon": "mdi-run", "time": null},
       "diverse": {"name": "Diverse", "icon": "mdi-run", "time": null},
       "labbers": {"name": "Lab rats", "icon": "mdi-run", "time": null},

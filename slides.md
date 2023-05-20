@@ -12,7 +12,7 @@ codeCopy: false
 title: testing, testing, is this thing on?
 ---
 
-# testing, testing, is this thing on?
+# testing, is this thing on?
 
 <!--
 Setup. Remember your feet. Remember your larynx
@@ -67,25 +67,50 @@ layout: cover
 split: start
 layout: speedimage
 background: /images/django_logo.svg
+dim: false
 ---
-## Credentials
-
-<v-click><img src="/images/pretalx_logo.svg" style="width: 25%"></v-click>
-<v-click><img src="/images/djangocon_logo.svg" style="width:25%"></v-click>
-<v-click><img src="/images/rixx.de.svg" style="width:25%"></v-click>
-
 <!--
 [timer starts running]
 
 … after a short intro, because it is extremely awkward to be standing here without
 any kind of justification, assuming the authority of a keynote speaker, such as it is.
 
+-->
+
+---
+layout: speedimage
+background: /images/pretalx_logo.svg
+imageWidth: 25%
+dim: false
+---
+
+<!--
+
 So, hi, I'm Tobias. I built pretalx (the tool giving you this conference schedule,
-yell at me about it in the hallway track), and I ran DjangoCon Europe Heidelberg together
+yell at me about it in the hallway track), and I ran DjangoCon Europe Heidelberg
+-->
+
+---
+layout: speedimage
+background: /images/djangocon_logo.svg
+imageWidth: 25%
+dim: false
+---
+
+<!--
+together
 with some people you'll also see on stage here. I also dislike talking about myself, so,
 moving on,
+-->
 
+---
+layout: speedimage
+background: /images/rixx.de.svg
+imageWidth: 25%
+dim: false
+---
 
+<!--
 **second time**. I am your keynote speaker today, and if you want to know more, uhm, check rixx.de and a bunch of related
 sub-pages.
 
@@ -94,11 +119,15 @@ sub-pages.
 split: intro
 ---
 
-# speedrunning
+<h1 style="text-decoration: underline">
+  speedrunning
+  ([ˈspiːdˌr<span style="transform: scale(-1, 1);">v</span>ni<span style="letter-spacing:-9.2px; position: relative">nj<span style="display: block; position: absolute; top: -8px; left: 3px; px; width: 10px; height: 10px; background-color: #092e20;"></span></span> ]),
+  noun:
+</h1>
 
-<v-click>
-<h2>going very very fast</h2>
-</v-click>
+<v-click> <h2>going very very fast</h2> </v-click>
+<v-click> <h2>in video games</h2> </v-click>
+<v-click> <h2>(to reach a goal within a given set of rules)</h2> </v-click>
 
 <!--
 what is speedrunning?  and how does it apply to software development?
@@ -120,9 +149,11 @@ objective as fast as possible within certain rules.
 
 ---
 split: definition
+layout: speedimage
+background: /images/startspeedrunning.png
+dim: false
 ---
 
-# First impression
 
 <!--
 First impression often overwhelming
@@ -132,15 +163,39 @@ but speedrunners spend tons of time on the game, thousands of hours
 and there is method to the madness
 -->
 ---
-
-# Rules and categories
-
-# SM64
+layout: speedimage
+background: /images/star.png
+dim: false
+imageRepeat: 70
+imageWidth: 90px
+---
 
 <!--
 What varies among runs are the rules and the goals. Let me demonstrate with SM64.
 
 - normally, you need 70 stars to finish the game
+-->
+
+---
+layout: speedimage
+background: /images/star.png
+dim: false
+imageRepeat: 70
+imageWidth: 180px
+---
+<!--
+- but with different sorts of tricks and glitches, you can get away with 16, 1 or even 0
+- all of these are different speedrun categories,
+- as comparing a 46 minute 70 star run with a 6 minute 0 star run makes no sense
+-->
+
+---
+layout: speedimage
+background: /images/star.png
+dim: false
+imageWidth: 180px
+---
+<!--
 - but with different sorts of tricks and glitches, you can get away with 16, 1 or even 0
 - all of these are different speedrun categories,
 - as comparing a 46 minute 70 star run with a 6 minute 0 star run makes no sense
@@ -148,23 +203,25 @@ What varies among runs are the rules and the goals. Let me demonstrate with SM64
 
 ---
 split: rules
+layout: speedimage
+background: /images/glitch01.png
+imageOrientation: left
+dim: false
+imageWidth: 740px
 ---
-
-# Similarities
 
 <!--
 Appearances are very little in common. high-stress, game vs real life. 
--->
 
----
-
-# Open
-
-<!--
-Open about strategies, no strat hiding, everybody contributes.
+First off. open about strategies, no strat hiding, everybody contributes.
 -->
 ---
 split: similarities.open
+layout: speedimage
+background: /images/glitch02.png
+imageOrientation: left
+dim: false
+imageWidth: 740px
 ---
 
 # Experts
@@ -177,25 +234,46 @@ At least when the questions show participation
 -->
 ---
 split: similarities.experts
+layout: speedimage
+background: /images/diversity1.png
+imageOrientation: left
+dim: false
 ---
-# Diversity
 
 <!--
 Online communities diverse
-But also in other sense. languages, frameworks, goals
+But also in other sense. more games than programming languages, not exactly the same
+-->
+---
+layout: speedimage
+background: /images/diversity2.png
+imageOrientation: left
+dim: false
+imageWidth: 740px
+---
+<!--
+even within a game, runs are different, and there's more than just the official well-known ones
 -->
 ---
 split: similarities.diverse
+layout: speedimage
+background: /images/roles1.jpg
+dim: false
+imageOrientation: left
+imageWidth: 740px
 ---
-# Roles
 
 <!--
 Lots of non-obvious roles. People only see the stars, top runners.
 Not only are there more runners, there are also more roles in the community.
 -->
 ---
+layout: speedimage
+background: /images/roles2.jpg
+dim: false
+imageOrientation: left
+imageWidth: 740px
 ---
-# Labbers
 
 <!--
 Labbers figure out new time saves, glitches, tricks.
@@ -205,12 +283,16 @@ or even just line-ups
 For example... cartridge switching to access ram instruction pointer magic
 -->
 ---
+layout: speedimage
+background: /images/roles3.jpg
+dim: false
+imageOrientation: left
+imageWidth: 740px
 split: similarities.labbers
 ---
 
-# Tournaments
-
 <!--
+Verifiers.
 Tournament organisers. scheduling, artwork, commentators, runners, timeline, rules
 Largely unseen
 Not unLike conference organisers
@@ -218,10 +300,13 @@ Remember to say thanks
 -->
 
 ---
+layout: speedimage
+background: /images/roles4.jpg
+dim: false
+imageOrientation: left
+imageWidth: 740px
 split: similarities.organisers
 ---
-
-# Governance
 
 <!--
 So many decisions, each community differently
@@ -247,10 +332,14 @@ Everybody chases flow state
 -->
 
 ---
+layout: speedimage
+background: /images/posture.png
+dim: false
+imageOrientation: left
+imageWidth: 600px
+imageCredit: "@Nintega-Dario on DeviantArt"
 split: similarities.flow
 ---
-
-# Posture
 
 
 <!--
@@ -263,10 +352,14 @@ also rely utterly on their hands, and piano players resemble us a lot. we can le
 -->
 
 ---
+layout: speedimage
+background: /images/posture.png
+dim: false
+imageOrientation: left
+imageWidth: 600px
+imageCredit: "@Nintega-Dario on DeviantArt"
 split: similarities.posture
 ---
-
-# bodies
 
 <!--
 it's not only obvious injuries. without movement. worse cognition. we aren't just brains, matrix-like attached to
@@ -274,12 +367,17 @@ computers. we have, and are, bodies, and neglecting that makes us think worse an
 -->
 
 ---
+layout: speedimage
+background: /images/hype.png
+dim: false
+imageOrientation: left
+imageWidth: 740px
 split: similarities.bodies
 ---
 
-# hype cycles
-
 <!--
+
+hype cycles
 
 new tricks, new frameworks, new hype
 new tools
@@ -287,23 +385,32 @@ can choose to not engage, but will end up left behind to a degree
 also have to engage to judge
 -->
 ---
+layout: speedimage
+background: /images/hype.png
+dim: false
+imageOrientation: left
+imageWidth: 740px
 split: similarities.hype
 ---
 
-# Differences
-
 <!--
+Differences
+
 Lots of differences of course. no high stress, no competition, no game, no leaderboards
 (what would our leaderboards be about lol)
 but mostly about what we **do**. let me illustrate
 -->
 ---
 
-# SM64 / Suigi
+<img src="/images/suigi1.png" style="transform: rotate(-10deg)">
+<v-click><img src="/images/suigi2.png" style="transform: rotate(10deg); width: 400px; margin-left: 250px; margin-top: -50px"></v-click>
+<v-click><img src="/images/suigi3.png" style="transform: rotate(15deg); width: 400px"></v-click>
+<v-click><img src="/images/suigi4.png" style="transform: rotate(-5deg); width: 400px; margin-left: 300px"></v-click>
 
 <!--
 Super Mario 64 is really old, and one of the most famous and most active speedgames
 highly competetive
+
 as of two months ago, 0 1 and 16 same record holder
 Suigi
 what's more, 7, 10, 15 seconds ahead, amazing times
@@ -317,9 +424,10 @@ working, much less time learning
 
 ---
 split: differences
+class: 'text-center'
 ---
 
-# Practice
+# Deliberate Practice
 
 <!--
 And that's what I really want to talk about. I just used speedrunning to draw you in. hah!
@@ -328,13 +436,33 @@ the past decades have shown us much more how practice works
 and that practice is vastly more important than intelligence
 -->
 ---
-# pratchett
+layout: speedimage
+background: /images/sky.jpg
+---
+
+<v-click><h1>“If you trust in yourself …”</h1></v-click>
+
+<v-click><h1>“Yes?”</h1></v-click>
+
+<v-click><h1>“… and believe in your dreams …”</h1></v-click>
+
+<v-click><h1>“Yes?”</h1></v-click>
+
+<v-click><h1>“… and follow your star …”</h1></v-click>
+
+<v-click><h1>“Yes?”</h1></v-click>
+
+<v-click><h1>“… you'll still get beaten by people who spent THEIR time working hard and learning things and weren't so lazy. Goodbye.”</h1></v-click>
+
+<v-click><h3> Terry Pratchett, The Wee Free Men</h3></v-click>
 
 <!--
 obligatory pratchett quote here
 -->
+
 ---
-# Practice talent intelligence
+
+# Todo chart: Practice talent intelligence
 
 <!--
 Intelligence and talent aren't useless, but mostly useful in starting out.
@@ -344,6 +472,7 @@ Many many things have been shown to be about the right kind of practice rather t
 - even adults can learn an adequate replacement
 - it's all about the kind and quality of practice
 -->
+
 ---
 split: practice.talent
 ---

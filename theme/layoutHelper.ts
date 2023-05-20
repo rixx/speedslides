@@ -9,13 +9,13 @@ export function resolveAssetUrl(url: string) {
   return url
 }
 
-export function handleBackground(background?: string, dim = true): CSSProperties {
+export function handleBackground(background?: string, dim = true, width = null, repeat = null, orientation = null): CSSProperties {
   const isColor = background && ['#', 'rgb', 'hsl'].some(v => background.indexOf(v) === 0)
 
   const style = {
-    background: isColor
+    backgroundColor: isColor
       ? background
-      : undefined,
+      : "#092e20",
     color: (background && !isColor)
       ? 'white'
       : undefined,
@@ -27,9 +27,9 @@ export function handleBackground(background?: string, dim = true): CSSProperties
           // ? `linear-gradient(#000c, #000c), url(${resolveAssetUrl(background)})`
           : `url("${resolveAssetUrl(background)}")`
         : undefined,
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
-    backgroundSize: 'cover',
+    backgroundRepeat: repeat ? 'space' : 'no-repeat',
+    backgroundPosition: orientation ? orientation : 'center',
+    backgroundSize: width ? width : 'cover',
   }
 
   if (!style.background)
