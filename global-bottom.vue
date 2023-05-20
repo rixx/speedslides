@@ -3,7 +3,43 @@ import { watch } from 'vue'
 const splits = {
   "intro": {"name": "Intro", "icon": "mdi-home", "time": null, "splitDiff": -5.4},
   "definition": {"name": "Speedrunning", "icon": "mdi-run", "time": null},
+  "rules": {"name": "Rules and frameworks", "icon": "mdi-run", "time": null},
+  "similarities": {
+    "name": "Similarities",
+    "icon": "mdi-run",
+    "time": null,
+    "subsplits": {
+      "open": {"name": "Work in public, play in public", "icon": "mdi-run", "time": null},
+      "experts": {"name": "Don't ask to ask", "icon": "mdi-run", "time": null},
+      "diverse": {"name": "Diverse", "icon": "mdi-run", "time": null},
+      "labbers": {"name": "Lab rats", "icon": "mdi-run", "time": null},
+      "organisers": {"name": "Tournaments", "icon": "mdi-run", "time": null},
+      "governance": {"name": "Governance", "icon": "mdi-run", "time": null},
+      "flow": {"name": "Flow", "icon": "mdi-run", "time": null},
+      "posture": {"name": "Posture", "icon": "mdi-run", "time": null},
+      "bodies": {"name": "Brains", "icon": "mdi-run", "time": null},
+      "hype": {"name": "Hype", "icon": "mdi-run", "time": null},
+    }
+  },
+  "differences": { "name": "Differences", "icon": "mdi-run", "time": null },
+  "practice": { "name": "Deliberate Practice", "icon": "mdi-run", "time": null,
+    "subsplits": {
+      "talent": { "name": "Talent and Intelligence", "icon": "mdi-run", "time": null },
+      "practice": { "name": "Deliberate Practice", "icon": "mdi-run", "time": null },
+      "representation": { "name": "Mental Representations", "icon": "mdi-run", "time": null },
+    }
+  },
+  "action": { "name": "Call to Action", "icon": "mdi-run", "time": null,
+    "subsplits": {
+      "fluency": { "name": "Fluency", "icon": "mdi-run", "time": null },
+      "tools": { "name": "Tools", "icon": "mdi-run", "time": null },
+      "spaced": { "name": "Spaced Repetition", "icon": "mdi-run", "time": null },
+      "feedback": { "name": "Feedback", "icon": "mdi-run", "time": null },
+    }
+  },
+  "outro": { "name": "Outro", "icon": "mdi-run", "time": null },
 }
+let currentSplit = $ref("intro")
 const formatTimeMs = (time) => {
   const date = new Date(time)
   const milliseconds = date.getUTCMilliseconds()
@@ -35,12 +71,19 @@ setInterval(() => {
   timer = Date.now() - startTime
 }, 10)
 watch($slidev.nav, () => {
-  console.log($slidev.nav.route.meta.split)
+  // Do not trigger if just part of the slide has advanced
+  if ($slidev.nav.clicks > 0) return
   if ($slidev.nav.route.meta.split == "reset") {
     startTime = Date.now()
     timer = 0
     for (const split of Object.values(splits)) {
-      split.time = null
+      if (split.subsplits) {
+        for (const subSplit of Object.values(split.subsplits)) {
+          subSplit.time = null
+        }
+      } else {
+        split.time = null
+      }
     }
     timerMode = "stop"
   } else if ($slidev.nav.route.meta.split == "stop") {
@@ -53,9 +96,33 @@ watch($slidev.nav, () => {
     timerMode = "start"
     startTime = Date.now()
   } else if ($slidev.nav.route.meta.split) {
-    splits[$slidev.nav.route.meta.split].time = Date.now() - startTime
+    // "." indicates a sub-split
+    if ($slidev.nav.route.meta.split.includes(".")) {
+      const [split, subSplit] = $slidev.nav.route.meta.split.split(".")
+      const splittime = Date.now() - startTime
+      splits[split].subsplits[subSplit].time = splittime
+      // if this was the last sub-split, set the parent split time
+      if (Object.values(splits[split].subsplits).every(subSplit => subSplit.time != null)) {
+        splits[split].time = splittime
+        currentSplit = Object.keys(splits).find(split => splits[split].time == null)
+        console.log("was the last split, updating currentSplit")
+        console.log(currentSplit)
+      } else {
+        // currentSplit is the next sub-split in line
+        currentSplit = `${split}.${Object.keys(splits[split].subsplits).find(subSplit => splits[split].subsplits[subSplit].time == null)}`
+      }
+    } else {
+      splits[$slidev.nav.route.meta.split].time = Date.now() - startTime
+      currentSplit = Object.keys(splits).find(split => splits[split].time == null)
+    }
+    if (!currentSplit) {
+      timerMode = "stop"
+      // in 10ms, set last split to the end time, otherwise we have <10s difference
+      setTimeout(() => {
+        splits[$slidev.nav.route.meta.split].time = timer
+      }, 10)
+    }
   }
-  console.log(timerState)
 })
 </script>
 <template>
@@ -70,24 +137,45 @@ watch($slidev.nav, () => {
       </div>
     </div>
     <table id="splitlist">
-      <tr v-for="split in Object.values(splits)" :key="split.name" class="split">
-        <td>
-        </td>
-        <td>
-          {{ split.name }}
-        </td>
-        <td>
-          <span v-if="split.time">
-              {{ split.splitDiff }}
-          </span>
-        </td>
-        <td>
-          <span v-if="split.time" class="mdi mdi-check">
-              {{ formatTimeFull(split.time) }}
-          </span>
-          <span v-else>-</span>
-        </td>
-      </tr>
+      <template v-for="(split, code, index) in splits" :key="split.name">
+        <tr class="split">
+          <td>
+          </td>
+          <td class="splitname">
+            {{ split.name }}
+          </td>
+          <td class="timediff">
+            <span v-if="split.time">
+                {{ split.splitDiff }}
+            </span>
+          </td>
+          <td class="timetotal">
+            <span v-if="split.time" class="mdi mdi-check">
+                {{ formatTimeFull(split.time) }}
+            </span>
+            <span v-else>-</span>
+          </td>
+        </tr>
+          <tr v-if="split.subsplits && currentSplit && currentSplit.startsWith(code)" v-for="subsplit in Object.values(split.subsplits)" :key="subsplit.name" class="subsplit split">
+            <td>
+              <span class="mdi mdi-24px mdi-{{ subsplit.icon }}"></span>
+            </td>
+            <td class="splitname">
+              {{ subsplit.name }}
+            </td>
+            <td>
+              <span v-if="subsplit.time">
+                  {{ subsplit.splitDiff }}
+              </span>
+            </td>
+            <td>
+              <span v-if="subsplit.time" class="mdi mdi-check">
+                  {{ formatTimeFull(subsplit.time) }}
+              </span>
+              <span v-else>-</span>
+            </td>
+        </tr>
+      </template>
     </table>
     <div id="timer">
       <span id="timerbig">{{ formatTime(timer) }}</span><span id="timersmall">.{{ formatTimeMs(timer) }}</span>
