@@ -24,9 +24,11 @@ background: ./public/images/01-title-mario.jpg
 layout: cover
 ---
 
-# just one thing after n-other
+## just one thing after n-other
 
-## a speedrunning guide to software development
+<div style="height: 50px"></div>
+
+# a speedrunning guide<br> to software development
 
 <!--
 Feet. Larynx.
@@ -44,10 +46,12 @@ split: show
 background: ./public/images/01-title-mario.jpg
 layout: cover
 ---
-# just one thing after n-other
 
-## fastest mario
+## just one thing after n-other
 
+<div style="height: 50px"></div>
+
+# a speedrunning guide<br> to software development
 
 
 <!--

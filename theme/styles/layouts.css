@@ -1,3 +1,7 @@
+#page-root {
+  font-family: "TGL 31034-1";
+}
+
 .slidev-presenter {
   .grid-section.top img { display: none }
   .note .prose {
@@ -19,26 +23,32 @@
 
   h1 {
     @apply text-4xl mb-4 -ml-[0.05em];
+    font-weight: bold;
   }
 
   h2 {
     @apply text-3xl;
+    font-weight: bold;
   }
 
   h3 {
     @apply text-2xl;
+    font-weight: bold;
   }
 
   h4 {
     @apply text-xl;
+    font-weight: bold;
   }
 
   h5 {
     @apply text-base;
+    font-weight: bold;
   }
 
   h6 {
     @apply text-sm pt-1 uppercase tracking-widest font-500 -ml-[0.05em];
+    font-weight: bold;
   }
 
   h6:not(.opacity-100) {
