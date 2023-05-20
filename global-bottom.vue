@@ -200,15 +200,6 @@ watch($slidev.nav, () => {
 #livesplit.hidden {
   visibility: hidden;
 }
-#timer {
-  font-size: 1.7em;
-  font-weight: bold;
-  text-align: right;
-  background: linear-gradient(180deg, rgba(128,255,162,1) 0%, rgba(0,163,44,1) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  width: 300px;
-}
 #livesplittitle {
   display: flex;
   flex-direction: row;
@@ -216,13 +207,14 @@ watch($slidev.nav, () => {
   align-items: center;
   padding: 10px;
   background: linear-gradient(rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0) 100%);
+  font-size: 0.8em;
   #title-left {
     display: flex;
     flex-direction: row;
     align-items: center;
     img {
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
       margin-right: 10px;
     }
   }
@@ -234,24 +226,43 @@ watch($slidev.nav, () => {
 }
 #splitlist {
   width: 100%;
-  font-size: 1.2em;
+  font-size: 0.8em;
   color: white;
   text-shadow: 2px 2px 2px rgba(0,0,0,.5);
   margin-bottom: 20px;
   padding-left: 10px;
 }
+#splitlist .timediff, #splitlist .timetotal {
+  text-align: right;
+  padding-right: 10px;
+}
+.split .splitname {
+  padding-left: 8px
+}
+.subsplit .splitname {
+  padding-left: 24px
+}
 .split:nth-child(2n) {
   background-color: rgba(255, 255, 255, 0.08);
 }
 #timer {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  font-weight: bold;
+  text-align: right;
+  background: linear-gradient(180deg, rgba(128,255,162,1) 0%, rgba(0,163,44,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-family: "timer";
-  font-weight: normal;
+  font-weight: 100;
+  margin-right: 8px;
 }
 #timerbig {
-  font-size: 2em;
+  font-size: 2.7em;
 }
 #timersmall {
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 .slidev-page {
   filter: brightness(0.1) !important;
