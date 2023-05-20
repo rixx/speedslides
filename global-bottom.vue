@@ -192,10 +192,13 @@ watch($slidev.nav, () => {
   position: fixed;
   bottom:0;
   right: 0;
+  height: 100%;
   z-index: 1000;
   color: white;
   background-color: rgba(0,0,0,0.8);
   font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 #livesplit.hidden {
   visibility: hidden;
@@ -257,6 +260,7 @@ watch($slidev.nav, () => {
   font-family: "timer";
   font-weight: 100;
   margin-right: 8px;
+  margin-top: auto;
 }
 #timerbig {
   font-size: 2.7em;
