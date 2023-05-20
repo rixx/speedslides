@@ -578,8 +578,11 @@ split: action.feedback
 <!--
 no time to talk about AI and Copilot and how it makes learning harder. talk to me in the hallway track.
 -->
+
 ---
+
 # mediocre is fine
+
 <!--
 mediocre si fine, you can't be good at everything anyways
 but you can be good at the things you want to be good at
@@ -587,16 +590,35 @@ pick things to be good at
 ease your mental load
 if you're not improving, it's not you, just your practice methods
 -->
----
-# have fun
 
+---
+layout: speedimage
+background: /images/end.png
+dim: false
+imageWidth: 740px
+imageOrientation: left
+---
 
 <!--
 go forth, continue slide when stopped talking!
 -->
+
 ---
+layout: speedimage
+background: /images/end.png
+dim: false
+imageWidth: 740px
+imageOrientation: left
 split: outro
 ---
 
-# have fun
+<!-- if timer does not stop, GOTO next -->
 
+---
+layout: speedimage
+background: /images/end.png
+dim: false
+imageWidth: 740px
+imageOrientation: left
+timer: stop
+---
