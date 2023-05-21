@@ -163,12 +163,12 @@ watch($slidev.nav, () => {
             <td class="splitname">
               {{ subsplit.name }}
             </td>
-            <td>
+            <td class="timediff">
               <span v-if="subsplit.time">
                   {{ subsplit.splitDiff }}
               </span>
             </td>
-            <td>
+            <td class="timetotal">
               <span v-if="subsplit.time" class="mdi mdi-check">
                   {{ formatTimeFull(subsplit.time) }}
               </span>
@@ -238,6 +238,8 @@ watch($slidev.nav, () => {
 #splitlist .timediff, #splitlist .timetotal {
   text-align: right;
   padding-right: 10px;
+  font-family: "timer";
+  font-weight: 100;
 }
 .split .splitname {
   padding-left: 8px

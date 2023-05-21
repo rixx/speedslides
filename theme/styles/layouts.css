@@ -1,14 +1,14 @@
-#page-root {
+#page-root, #slideshow, #slide-content {
   font-family: "TGL 31034-1";
 }
 
 .slidev-presenter {
   .grid-section.top img { display: none }
   .note .prose {
-    font-size: 2em;
+    font-size: 22px;
   }
   .grid-container {
-    grid-template-columns: 1fr 1fr 2fr !important;
+    grid-template-columns: 0.2fr 0.5fr 2fr !important;
   }
 }
 .slidev-layout {

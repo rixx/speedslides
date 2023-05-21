@@ -224,8 +224,6 @@ dim: false
 imageWidth: 740px
 ---
 
-# Experts
-
 <!--
 Experts help
 At least when the questions show participation
