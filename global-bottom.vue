@@ -15,9 +15,7 @@ const splits = {
       "labbers": {"name": "Lab rats", "icon": "mdi-run", "time": null},
       "organisers": {"name": "Tournaments", "icon": "mdi-run", "time": null},
       "governance": {"name": "Governance", "icon": "mdi-run", "time": null},
-      "flow": {"name": "Flow", "icon": "mdi-run", "time": null},
       "posture": {"name": "Posture", "icon": "mdi-run", "time": null},
-      "bodies": {"name": "Brains", "icon": "mdi-run", "time": null},
       "hype": {"name": "Hype", "icon": "mdi-run", "time": null},
     }
   },
