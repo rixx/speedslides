@@ -376,33 +376,6 @@ other way around, do people with code of conduct violations still get to show up
 -->
 
 ---
-split: similarities.governance
-layout: speedimage
-background: /images/posture.png
-dim: false
-imageOrientation: left
-imageWidth: 600px
-imageCredit: "@Nintega-Dario on DeviantArt"
----
-
-
-<!--
-What else do we have in common?
-
-- We all chase that elusive flow state that makes hard things easy and joyful
-- We all sit for hours in front of a screen, often with increasingly terrible posture, with resulting back pain and
-  headaches
-- The vast majority relies on their hands as input method, and any bit of bad posture or incorrect tension can lead to
-  repeptitive strain injury and threatens to permanently ruin our hands. (By the way, speedrunners are way more
-  attentive to this than software developers, and I think we can do better here. As both speedrunning and SD are pretty
-  new, globally speaking, it's very worth your time to look into how eg professional musicians handle these things –
-  they rely on their hands even more than we do, and have had centuries to figure out how to be a concert pianist
-  without losing use of their hands after a decade or two.)
-- sitting still in front of a screen is bad for cognition, we are made to move, and it's easy to forget that and start
-  feeling like a brain with hands. We're not just brains! We are bodies. Please please remember tomove.
--->
-
----
 layout: speedimage
 background: /images/hype.png
 dim: false
@@ -434,7 +407,7 @@ split: similarities.hype
 
 <!--
 And that's it for the similarities between speedrunning and software development. (I lie – there's much more!
-Tool-assisted speedruns, creative categories and much more, but we don't have time!)
+Tool-assisted speedruns, bad posture and hand pain rather than learning from musicians who have solutions to those and much more, but we don't have time!)
 
 The differences are easier and more, of course: Software Development does not require twitch reflexes, repeating the
 same optimised movement for hours, it's, in the end, not a game, and we don't even have leaderboards. (What would our
@@ -630,9 +603,10 @@ split: practice.representation
 
 <!--
 
-- fluency matters so much, no waste
-- multiplication tables, unthinking use
-- you want that fluency whereever you can
+The main thing we're aiming for with these large mental representations is fluency. If good mental representations are
+the invisible reason behind expertise, then fluency is the visible symptom. Think about multipliation tables: Nobody
+likes learning them, but knowing how to multiply small numbers without thinking is dead useful. Aiming at effortless
+fluency is a good way to identify what to improve.
 -->
 ---
 split: action.fluency
@@ -641,13 +615,20 @@ split: action.fluency
 
 
 <!--
-learn your tools
-- typing practice levels
-  - just practice
-  - with timer
-  - problems explicitly
-- editor actions, shortcuts, chunk size
-- programming language and framework, looking things up on stackoverflow is not fluency (or copilot)
+And the best way to build fluency in software development, arguably, is by being fluent in the tools you use. Our daily
+tasks are nowhere near as repetitive as a speedrun, but our use of our tools is, and anything that's repetitive can be
+practiced and optimised.
+
+The first and most obvious thing to work on is typing. Now, I'm not advocating for any particular way of typing, or a
+specific keyboard layout – all I'm saying is that when your typing isn't fluent and effortless and fast, then everything
+that is downstream of typing will suffer.
+
+Of course there are different ways to practice typing – you can just take the naive approach of typing more, possibly
+with a timer. This will probably improve your typing a bit, but not a lot. Real improvements start when you figure out
+aspects and letter combinations that give you trouble, and practice them in particular. I, for example, have for many
+years held the title of regional champion in misspelling django – if there were leaderboards for that, I'd have been at
+the very top. djagno, dajgno, – my hit chance was roughly 50%, until I sat down a few times one week and practiced until
+that went away.
 -->
 ---
 split: action.tools
@@ -655,10 +636,25 @@ split: action.tools
 # spaced repetition
 
 <!--
-learn things with spaced repetition
-- setTimeout order of arguments
-- django imports
-- half an hour per week of stdlib and putting things you want to remember somewhere
+The next thing that I want to advocate for learning is your language, your libraries, your framework. Looking things up
+in the Python docs, or the Django docs, or StackOverflow is the opposite of fluency: it breaks flow, and it's
+frustrating. 
+
+How do I know? Well, if you thought I couldn't get more impressive than being unable to spell "django", I live to
+surprise: My most looked-up function for years used to be JavaScript's setTimeout. It's a function with all of two
+arguments. But I could NEVER remember the argument order or if the timeout interval was set in seconds or milliseconds. 
+Eventually, I put the function signature into a flashcard tool. Most of those use a mechanism called "spaced
+repetition", which shows you cards that you remember in increasingly larger intervals (one day, one week, etc), and if you forget a card, you
+start over by seeing it every day. It's a very simple concept, and works very well to remember things.
+
+When that worked, I started to occasionally just read parts of the Python and Django docs, and put important or useful
+seeming facts in there. Different things will work for you, but spaced repetition is shown to align very well with how
+memory works, and increased fluency of not looking everything up (and even just knowing that many useful tools exist!)
+has been great.
+
+I don't have a great way for you to build mental representations, apart from keeping in mind that they exist, and
+recognising when they fail you. Interactive debuggers can be useful in my experience, as they prompt you to stop and
+explore and predict what is going to happen, but that's the best I have to offer.
 -->
 ---
 split: action.spaced
@@ -666,11 +662,15 @@ split: action.spaced
 # build feedback loops
 
 <!--
-feedback loops all the way. ideally with experts, pair programming etc
-but also simulate experts
-- read code but only parts and think how you'd build them, then uncover
-- watch streams of good/interesting coders, but pause and think before continuing
-- record your screen and play back fast to see where you waste time
+And finally: build tight feedback loops in whatever you want to learn or improve or do.
+Notice when you don't have good feedback loops. What kind of feedback loops? That depends on the situation, honestly.
+I mentioned pair programming, but when that's not an option, there are a few other things to try:
+An exercise I like a lot is to read other people's code, but try to write parts of it myself, then compare the results.
+Similarly, there are people who record and stream their programming sessions on Twitch or YouTube, and watching
+something like that, but pausing and trying to predict their next actions can be very informative.
+
+And finally, the possibly roughest suggestion I have: Be your own feedback loop. Take a screen recording of a day's
+work, and then play it back at high speed. Fair warning: this can be a very uncomfortable experience :D
 -->
 ---
 split: action.feedback
@@ -678,7 +678,8 @@ split: action.feedback
 # AI
 
 <!--
-no time to talk about AI and Copilot and how it makes learning harder. talk to me in the hallway track.
+I wish I had time to talk about AI and Copilot and how they make the deep, deliberate kind of learning harder, by making
+the shallow kind easier. But no time – if you want to talk about that, find me later.
 -->
 
 ---
@@ -686,11 +687,11 @@ no time to talk about AI and Copilot and how it makes learning harder. talk to m
 # mediocre is fine
 
 <!--
-mediocre si fine, you can't be good at everything anyways
-but you can be good at the things you want to be good at
-pick things to be good at
-ease your mental load
-if you're not improving, it's not you, just your practice methods
+One final note before we run out of time: I've talked a lot about expertise and excellence. I don't mean to imply that
+you have a duty to be excellent, or an expert. You can't be good at everything, anyways. But I hopefully made the point
+that you CAN be good at the things you want to be good at, and that it's good to consciously pick what those are. And
+that if you're trying to be good at something and are not, then: it's not you. It's not that you're born without the
+divine spark to write great Django code. It's just that your practice methods probably need a bit of work.
 -->
 
 ---
@@ -702,7 +703,8 @@ imageOrientation: left
 ---
 
 <!--
-go forth, continue slide when stopped talking!
+And finally: practice is often not fun. Even applying things you've practiced is not always fun. But you know what's
+fun? Hanging out with a ton of wonderful people here at DjangoCon. I hope you have a wonderful conference. Thank you.
 -->
 
 ---
