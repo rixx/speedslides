@@ -411,7 +411,7 @@ Tool-assisted speedruns, bad posture and hand pain rather than learning from mus
 
 The differences are easier and more, of course: Software Development does not require twitch reflexes, repeating the
 same optimised movement for hours, it's, in the end, not a game, and we don't even have leaderboards. (What would our
-leaderboards even be? Fastest StackOverflow responder? TODO )
+leaderboards even be? Fastest lookup on StackOverflow?)
 
 But the arguably most important difference is about what we DO. Let me illustrate
 -->
@@ -484,14 +484,15 @@ background: /images/sky.jpg
 <v-click><h3> Terry Pratchett, The Wee Free Men</h3></v-click>
 
 <!--
-obligatory pratchett quote here
--->
+If you trust in yourself
 
----
+And believe in your dreams
 
-# Todo chart: Practice talent intelligence
+And follow your star
 
-<!--
+you'll still get beaten by people who spent THEIR time working hard and learning things and weren't so lazy
+
+
 Intelligence and talent aren't useless, but they mostly useful in starting out. I'm going to refer to chess and music a
 lot, because both have been around for a long time, and have been well-studied.
 
@@ -512,9 +513,9 @@ split: practice.talent
 
 # The path to becoming an expert
 
-<v-click>- Motivation</v-click>
-<v-click>- deliberate practice</v-click>
-<v-click>- mental representation</v-click>
+<v-click><li>- Motivation</li></v-click>
+<v-click><li>- deliberate practice</li></v-click>
+<v-click><li>- mental representation</li></v-click>
 
 <!--
 There have been a lot of studies and papers written about all of this in the past decades, and they have identified
@@ -533,10 +534,10 @@ that in a bit.
 
 # Deliberate Practice
 
-<v-click>- doing</v-click>
-<v-click>- focus</v-click>
-<v-click>- comfort zone</v-click>
-<v-click>- feedback</v-click>
+<v-click><li>- doing</li></v-click>
+<v-click><li>- focus</li></v-click>
+<v-click><li>- comfort zone</li></v-click>
+<v-click><li>- feedback</li></v-click>
 
 <!--
 If we assume that skills don't fall from the sky and aren't part of you as a mystical talent for writing Django web
