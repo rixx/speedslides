@@ -501,7 +501,7 @@ even negatively correllated (very slightly) with skill, probably because people 
 figure out how to practice as much, and have to learn that at that point.
 
 Many many things have been shown to be about the right kind of practice rather than talent
-- absolute pitch can be taught to children
+- perfect pitch can be taught to children
 - even adults can learn an adequate replacement
 
 It's all about the kind and quality of practice, you can't just spend more time and brute force the issue.
