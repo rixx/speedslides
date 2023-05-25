@@ -27,26 +27,35 @@
   h1 {
     @apply text-4xl mb-4 -ml-[0.05em];
     font-weight: bold;
+    font-size: 3em;
+    margin-top: 1em;
   }
 
+  ul {
+    @apply list-disc pl-8;
+    @apply text-4xl mb-4 mt-4 -ml-[0.05em];
+    margin-top: 2em;
+  }
   h2 {
     @apply text-3xl;
     font-weight: bold;
   }
 
   h3 {
-    @apply text-2xl;
     font-weight: bold;
+    font-size: 2.25rem;
+    line-height: 3rem;
   }
 
   h4 {
-    @apply text-xl;
+    @apply text-4xl mb-4 -ml-[0.05em];
     font-weight: bold;
   }
 
   h5 {
     @apply text-base;
     font-weight: bold;
+    font-size: 1.25rem;
   }
 
   h6 {

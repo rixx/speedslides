@@ -11,7 +11,6 @@ const splits = {
     "subsplits": {
       "open": {"name": "Work in public", "icon": "mdi-run", "time": null},
       "experts": {"name": "Don't ask to ask", "icon": "mdi-run", "time": null},
-      "diverse": {"name": "Diverse", "icon": "mdi-run", "time": null},
       "labbers": {"name": "Lab rats", "icon": "mdi-run", "time": null},
       "organisers": {"name": "Tournaments", "icon": "mdi-run", "time": null},
       "governance": {"name": "Governance", "icon": "mdi-run", "time": null},
