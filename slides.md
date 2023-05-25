@@ -24,9 +24,7 @@ background: ./public/images/01-title-mario.jpg
 layout: cover
 ---
 
-## just one thing after n-other
-
-<div style="height: 50px"></div>
+<div style="height: 100px"></div>
 
 # a speedrunning guide<br> to software development
 
@@ -47,9 +45,7 @@ background: ./public/images/01-title-mario.jpg
 layout: cover
 ---
 
-## just one thing after n-other
-
-<div style="height: 50px"></div>
+<div style="height: 100px"></div>
 
 # a speedrunning guide<br> to software development
 
@@ -125,9 +121,12 @@ split: intro
   noun:
 </h1>
 
-<v-click> <h2>going very very fast</h2> </v-click>
-<v-click> <h2>in video games</h2> </v-click>
-<v-click> <h2>(to reach a goal within a given set of rules)</h2> </v-click>
+<ul style="list-style-type: none">
+<v-click><li> going very very fast</li> </v-click>
+<v-click><li> in video games</li></v-click>
+<v-click><li> ( to reach a goal ) </li></v-click>
+<v-click> <li> (( within specific rules ))</li> </v-click>
+</ul>
 
 <!--
 what is speedrunning?  and how does it apply to software development?
@@ -261,36 +260,6 @@ and here's a video of my attempts" will have people enthusiastically helping, mu
 ---
 split: similarities.experts
 layout: speedimage
-background: /images/diversity1.png
-imageOrientation: left
-dim: false
----
-
-<!--
-Another similarity is that it's actually hard to talk about speedrunning as such (and you'll see me returning to SM64
-because of this frequently), because there are just so many games and runners! It's similarly hard to talk about
-software development in general, as for example web development and systems development on embedded platforms is such a
-different experience.
--->
----
-layout: speedimage
-background: /images/diversity2.png
-imageOrientation: left
-dim: false
-imageWidth: 740px
----
-<!--
-
-But even within one game, or one language, we see this diversity play out – Python is used for web development and data
-engineering and sysadmin tasks, and these three groups have very different experiences with the language, different
-problems and expectations and hopes and frustrations. Much like the runners of shorter and longer, normal and glitched
-categories in any given game don't have that much in common, yet form one single community, with shared knowledge and
-governance.
-
--->
----
-split: similarities.diverse
-layout: speedimage
 background: /images/roles1.jpg
 dim: false
 imageOrientation: left
@@ -381,7 +350,7 @@ background: /images/hype.png
 dim: false
 imageOrientation: left
 imageWidth: 740px
-split: similarities.bodies
+split: similarities.governance
 ---
 
 <!--
@@ -411,7 +380,7 @@ Tool-assisted speedruns, bad posture and hand pain rather than learning from mus
 
 The differences are easier and more, of course: Software Development does not require twitch reflexes, repeating the
 same optimised movement for hours, it's, in the end, not a game, and we don't even have leaderboards. (What would our
-leaderboards even be? Fastest lookup on StackOverflow?)
+leaderboards even be? Fastest one to merge new PRs?)
 
 But the arguably most important difference is about what we DO. Let me illustrate
 -->
@@ -467,23 +436,25 @@ layout: speedimage
 background: /images/sky.jpg
 ---
 
-<v-click><h1>“If you trust in yourself …”</h1></v-click>
+<v-click><h3>“If you trust in yourself …”</h3></v-click>
 
-<v-click><h1>“Yes?”</h1></v-click>
+<v-click><h3>“Yes?”</h3></v-click>
 
-<v-click><h1>“… and believe in your dreams …”</h1></v-click>
+<v-click><h3>“… and believe in your dreams …”</h3></v-click>
 
-<v-click><h1>“Yes?”</h1></v-click>
+<v-click><h3>“Yes?”</h3></v-click>
 
-<v-click><h1>“… and follow your star …”</h1></v-click>
+<v-click><h3>“… and follow your star …”</h3></v-click>
 
-<v-click><h1>“Yes?”</h1></v-click>
+<v-click><h3>“Yes?”</h3></v-click>
 
-<v-click><h1>“… you'll still get beaten by people who spent THEIR time working hard and learning things and weren't so lazy. Goodbye.”</h1></v-click>
+<v-click><h3>“… you'll still get beaten by people who spent THEIR time working hard and learning things and weren't so lazy. Goodbye.”</h3></v-click>
 
-<v-click><h3> Terry Pratchett, The Wee Free Men</h3></v-click>
+<h5 style="margin-top: 1em"> Terry Pratchett, The Wee Free Men</h5>
 
 <!--
+[remember to double-click!!]
+
 If you trust in yourself
 
 And believe in your dreams
@@ -511,11 +482,13 @@ It's all about the kind and quality of practice, you can't just spend more time 
 split: practice.talent
 ---
 
-# The path to becoming an expert
+# Components of expertise
 
-<v-click><li>- Motivation</li></v-click>
-<v-click><li>- deliberate practice</li></v-click>
-<v-click><li>- mental representation</li></v-click>
+<ul>
+<v-click><li>Motivation</li></v-click>
+<v-click><li>Deliberate Practice</li></v-click>
+<v-click><li>Mental Representation</li></v-click>
+</ul>
 
 <!--
 There have been a lot of studies and papers written about all of this in the past decades, and they have identified
@@ -534,10 +507,12 @@ that in a bit.
 
 # Deliberate Practice
 
-<v-click><li>- doing</li></v-click>
-<v-click><li>- focus</li></v-click>
-<v-click><li>- comfort zone</li></v-click>
-<v-click><li>- feedback</li></v-click>
+<ul>
+<v-click><li>Doing</li></v-click>
+<v-click><li>Focus</li></v-click>
+<v-click><li>Comfort zone</li></v-click>
+<v-click><li>Feedback</li></v-click>
+</ul>
 
 <!--
 If we assume that skills don't fall from the sky and aren't part of you as a mystical talent for writing Django web
@@ -571,8 +546,7 @@ There are four crucial parts to DP:
 ---
 split: practice.practice
 ---
-# mental representations
-
+# Mental Representations
 
 <!--
 
@@ -600,7 +574,7 @@ entire piece in the back of their head for context): dududuududududu.
 ---
 split: practice.representation
 ---
-# fluency
+# Fluency
 
 <!--
 
@@ -612,8 +586,7 @@ fluency is a good way to identify what to improve.
 ---
 split: action.fluency
 ---
-# tools
-
+# Tools
 
 <!--
 And the best way to build fluency in software development, arguably, is by being fluent in the tools you use. Our daily
@@ -634,7 +607,7 @@ that went away.
 ---
 split: action.tools
 ---
-# spaced repetition
+# Spaced Repetition
 
 <!--
 The next thing that I want to advocate for learning is your language, your libraries, your framework. Looking things up
@@ -660,7 +633,7 @@ explore and predict what is going to happen, but that's the best I have to offer
 ---
 split: action.spaced
 ---
-# build feedback loops
+# Build Feedback Loops
 
 <!--
 And finally: build tight feedback loops in whatever you want to learn or improve or do.
@@ -676,7 +649,7 @@ work, and then play it back at high speed. Fair warning: this can be a very unco
 ---
 split: action.feedback
 ---
-# AI
+
 
 <!--
 I wish I had time to talk about AI and Copilot and how they make the deep, deliberate kind of learning harder, by making
@@ -685,7 +658,7 @@ the shallow kind easier. But no time – if you want to talk about that, find me
 
 ---
 
-# mediocre is fine
+# Pick what to be good at
 
 <!--
 One final note before we run out of time: I've talked a lot about expertise and excellence. I don't mean to imply that
