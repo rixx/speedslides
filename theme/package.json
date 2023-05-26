@@ -20,9 +20,6 @@
     "highlighter": "all",
     "defaults": {
       "fonts": {
-        "mono": "Fira Code",
-        "sans": "Avenir Next,Nunito Sans",
-        "local": "Avenir Next"
       }
     }
   },
