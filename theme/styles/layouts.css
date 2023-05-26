@@ -8,6 +8,7 @@
     font-size: 22px;
   }
   .grid-container {
+	grid-template-areas: "top top top" "main main note" "next next note" "bottom bottom bottom" !important;
     grid-template-columns: 0.2fr 0.5fr 2fr !important;
   }
 }
