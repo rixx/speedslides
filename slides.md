@@ -650,8 +650,14 @@ explore and predict what is going to happen, but that's the best I have to offer
 -->
 ---
 split: action.spaced
+imageWidth: 400px
+dim: false
+imageCredit: "@Nintega-Dario on DeviantArt"
+background: /images/music02.png
+layout: speedimage
+imageOrientation: bottom
 ---
-# Build Feedback Loops
+<h1 class="text-center">Build Feedback Loops</h1>
 
 <!--
 And finally: build tight feedback loops in whatever you want to learn or improve or do.
