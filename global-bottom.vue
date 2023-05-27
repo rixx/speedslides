@@ -195,6 +195,7 @@ watch($slidev.nav, () => {
   font-family: sans-serif;
   display: flex;
   flex-direction: column;
+  width: 250px;
 }
 #livesplit.hidden {
   visibility: hidden;

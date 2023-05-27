@@ -70,6 +70,12 @@ dim: false
 
 … after a short intro, because it is extremely awkward to be standing here without
 any kind of justification, assuming the authority of a keynote speaker, such as it is.
+So let me first off present my CV and my greatest LinkedIn hits. Hmmm, I don't feel a lot
+of enthusiasm at this prospect. Let's start over and cut the useless parts, then.
+
+[RESET]
+
+**second time** I'm Tobias, and I'll be your keynote speaker today.
 
 -->
 
@@ -81,8 +87,7 @@ dim: false
 ---
 
 <!--
-
-So, hi, I'm Tobias. I built pretalx (the tool giving you this conference call for proposals and schedule.
+I built pretalx (the tool giving you this conference call for proposals and schedule.
 If you have opinions about that, yell at me about it later). I also ran DjangoCon Europe Heidelberg ***NEXT***
 -->
 
@@ -95,8 +100,6 @@ dim: false
 
 <!--
 together with some other lovely people you'll also see on stage here in the coming days.
-
-I also dislike talking about myself, so, moving on, ***NEXT TWICE***
 -->
 
 ---
@@ -107,8 +110,7 @@ dim: false
 ---
 
 <!--
-**second time**. I am your keynote speaker today, and if you want to know more, uhm, check rixx.de and a bunch of related
-sub-pages.
+I also dislike talking about myself, so if you want to know anything else, you'll find it at my homepage.
 
 -->
 ---
@@ -131,19 +133,14 @@ split: intro
 <!--
 what is speedrunning?  and how does it apply to software development?
 
-you'll be glad to hear that I spent a lot of time researching definitions and current academic discussions, and am happy
-to share ALL of them with you. so, speedrunning …
-
-hold up, who here has heard of speedrunning before?
+okay, first off, who here has heard of speedrunning before?
 
 …
 
-ah. okay, in that case we can go a bit faster, I think. Let's try that again.
+ah. okay, in that case we can go a bit faster:
 
 
-**second time**. now, in the spirit of the topic, the fast definition:
-
-speedrunning is rigorously defined as playing games really fast, or rather, playing a game with the intent to reach a set
+speedrunning is playing games really fast, or rather, playing a game with the intent to reach a set
 objective as fast as possible within certain rules.
 -->
 
@@ -173,7 +170,7 @@ layout: speedimage
 background: /images/star.png
 dim: false
 imageRepeat: 70
-imageWidth: 90px
+imageWidth: 70px
 ---
 
 <!--
@@ -190,7 +187,7 @@ layout: speedimage
 background: /images/star.png
 dim: false
 imageRepeat: 70
-imageWidth: 180px
+imageWidth: 140px
 ---
 <!--
 However, it turns out that with some tricks and glitches, you can get away with just 16 stars (these aren't 16 either, I
@@ -202,7 +199,7 @@ and later, tricks were found to finisht the game with just
 layout: speedimage
 background: /images/star.png
 dim: false
-imageWidth: 180px
+imageWidth: 140px
 ---
 <!--
 one or zero stars.
@@ -219,7 +216,6 @@ layout: speedimage
 background: /images/glitch01.png
 imageOrientation: left
 dim: false
-imageWidth: 740px
 ---
 
 <!--
@@ -242,7 +238,6 @@ layout: speedimage
 background: /images/glitch02.png
 imageOrientation: left
 dim: false
-imageWidth: 740px
 ---
 
 <!--
@@ -267,7 +262,7 @@ imageWidth: 740px
 ---
 
 <!--
-Governance is another great point: Both software development and speedrunning have lots of non-obvious roles.
+The forum illustrates another thing: Both software development and speedrunning have lots of non-obvious roles.
 
 People only see the lone heroes, the stars, top runners, heroic lead developers.
 
@@ -289,6 +284,17 @@ the spectrum they will sit down with RAM inspectors and build exploits that are 
 those tricks, runners will kill an enemy at a specific position and then die at another position, making sure those
 coordinates are written to RAM and later called on as actual programming instructions.
 
+-->
+
+---
+layout: speedimage
+imageWidth: 400px
+dim: false
+imageCredit: "@Nintega-Dario on DeviantArt"
+background: /images/link-yoshi.png
+---
+
+<!--
 In one extreme case, you spend most of the speedrun for one game, Paper Mario, playing another game, Ocarina of Time, in
 order to set up these exploit variables, and then switching the game cartridge fast enough that the console will keep
 those values around. It's wild.
@@ -311,11 +317,11 @@ split: similarities.labbers
 <!--
 And there are roles even less obvious and even more in the shadows:
 
-Verifiers who make sure nobody cheats in their runs.
-
+Where there are leaderboards, there are competitions. In speedrunning, those are showcase races and tournaments.
 Event organisers who set up tournament, scheduling, commission artwork, organise commentators and runners into seamless
-streams. Event organisers work for months in the shadows just so that an event like this one can come together. Remember
-to thank your conference organisers, everybody!
+streams. Event organisers work for months in the shadows just so that an event like this one can come together.
+
+And that's why we're all extremely thankful to our wonderful conference organisers <3
 -->
 
 ---
@@ -328,10 +334,10 @@ split: similarities.organisers
 ---
 
 <!--
-And then, every growing group of people sooner or later needs governance. Both speedrunners and software developers have
+And, coming back to the forum, every growing group of people sooner or later needs governance. Both speedrunners and software developers have
 a social and a technical kind of governance. 
 
-Once you have a forum, you need moderation. Moderators need guidelines, a code of conduct, that somebody needs to write,
+Once you have a forum, or a mailing list, or a Discord server, you need moderation. Moderators need guidelines, a code of conduct, that somebody needs to write,
 and to enforce, and provide a place for confidential reports.
 
 On the technical side, in speedrunning there's deciding what the rules are, what counts as a glitch, making sure nobody
@@ -349,7 +355,6 @@ layout: speedimage
 background: /images/hype.png
 dim: false
 imageOrientation: left
-imageWidth: 740px
 split: similarities.governance
 ---
 
@@ -370,7 +375,6 @@ layout: speedimage
 background: /images/hype.png
 dim: false
 imageOrientation: left
-imageWidth: 740px
 split: similarities.hype
 ---
 
@@ -380,7 +384,7 @@ Tool-assisted speedruns, bad posture and hand pain rather than learning from mus
 
 The differences are easier and more, of course: Software Development does not require twitch reflexes, repeating the
 same optimised movement for hours, it's, in the end, not a game, and we don't even have leaderboards. (What would our
-leaderboards even be? Fastest one to merge new PRs?)
+leaderboards even be? Fastest one to merge new PRs? Lines of Code deleted?)
 
 But the arguably most important difference is about what we DO. Let me illustrate
 -->
@@ -418,20 +422,6 @@ working, much less time learning
 
 ---
 split: differences
-class: 'text-center'
----
-
-# Deliberate Practice
-
-<!--
-And that's what I really want to talk about. I just used speedrunning to draw you in. hah!
-
-the past decades have shown us much more how practice works
-and that practice is vastly more important than intelligence
-
-as the late and great Terry Pratchett said:
--->
----
 layout: speedimage
 background: /images/sky.jpg
 ---
@@ -450,9 +440,16 @@ background: /images/sky.jpg
 
 <v-click><h3>“… you'll still get beaten by people who spent THEIR time working hard and learning things and weren't so lazy. Goodbye.”</h3></v-click>
 
-<h5 style="margin-top: 1em"> Terry Pratchett, The Wee Free Men</h5>
+<h5 v-click="1" style="margin-top: 1em"> Terry Pratchett, The Wee Free Men</h5>
 
 <!--
+And practice is what I really want to talk about. I just used speedrunning to draw you in. hah!
+
+the past decades have shown us much more how practice works
+and that practice is vastly more important than intelligence
+
+as the late and great Terry Pratchett said:
+
 [remember to double-click!!]
 
 If you trust in yourself
@@ -545,8 +542,10 @@ There are four crucial parts to DP:
 -->
 ---
 split: practice.practice
+layout: speedimage
+background: /images/chess.webp
+dim: false
 ---
-# Mental Representations
 
 <!--
 
@@ -565,6 +564,18 @@ And the most important measure here is chunk size. The chess experts can encode 
 size, so they don't have to remember and think about 32 separate pieces and their positions when considering the board.
 My favourite illustration of this comes from music:
 
+-->
+
+---
+layout: speedimage
+imageWidth: 400px
+dim: false
+imageCredit: "@Nintega-Dario on DeviantArt"
+background: /images/music01.png
+---
+
+<!--
+
 When a child learns to play an instrument, and start to manage to hit notes, they will still sound something like this:
 du du du. They think about one note at a time. After some time their – speaking as a programmer – lookahead increases,
 and they may start to think about two notes at a time: dudu dudu. Better, right?
@@ -573,8 +584,10 @@ entire piece in the back of their head for context): dududuududududu.
 -->
 ---
 split: practice.representation
+layout: speedimage
+background: /images/fluent.png
+dim: false
 ---
-# Fluency
 
 <!--
 
@@ -585,8 +598,11 @@ fluency is a good way to identify what to improve.
 -->
 ---
 split: action.fluency
+layout: speedimage
+background: /images/posture.png
+imageWidth: 500px
+dim: false
 ---
-# Tools
 
 <!--
 And the best way to build fluency in software development, arguably, is by being fluent in the tools you use. Our daily
@@ -606,8 +622,10 @@ that went away.
 -->
 ---
 split: action.tools
+layout: speedimage
+background: /images/spaced.png
+dim: false
 ---
-# Spaced Repetition
 
 <!--
 The next thing that I want to advocate for learning is your language, your libraries, your framework. Looking things up
@@ -657,8 +675,13 @@ the shallow kind easier. But no time – if you want to talk about that, find me
 -->
 
 ---
+layout: speedimage
+background: /images/star.png
+dim: false
+imageWidth: 140px
+---
 
-# Pick what to be good at
+<h1 style="text-align: center">Pick what to be good at</h1>
 
 <!--
 One final note before we run out of time: I've talked a lot about expertise and excellence. I don't mean to imply that
