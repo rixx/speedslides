@@ -28,9 +28,12 @@ const style = computed(() => handleBackground(props.background, props.dim, props
 </script>
 
 <template>
-  <div class="slidev-layout speedimage" :style="style">
-    <div class="my-auto w-full">
-      <slot />
+  <div class="slidev-layout speedimage">
+    <div class="inner-speedimage" :style="style">
+      <div class="my-auto w-full">
+        <slot />
+      </div>
     </div>
+    <div style="width: 350px"></div>
   </div>
 </template>

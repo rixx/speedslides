@@ -12,8 +12,17 @@
     grid-template-columns: 0.2fr 0.5fr 2fr !important;
   }
 }
+.speedimage {
+  display: flex;
+  padding: 0 !important;
+  .inner-speedimage {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      padding: 2.5rem 3.5rem;
+    }
+}
 .slidev-layout {
-  padding-right: 300px;
   background-color: #092e20;
   color: white;
 
