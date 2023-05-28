@@ -1,50 +1,52 @@
 <script setup>
 import { watch } from 'vue'
 const splits = {
-  "intro": {"name": "Intro", "icon": "mdi-home", "time": null, "prevTime": "37.8"},
+  "intro": {"name": "Intro", "icon": "mdi-home", "time": null, "prevTime": "0:03.8"},
+  //"intro": {"name": "Intro", "icon": "mdi-home", "time": null, "prevTime": "37.8"},
   "definition": {"name": "Speedrunning", "icon": "mdi-run", "time": null, "prevTime": "1:05.7"},
-  "rules": {"name": "Rules", "icon": "mdi-run", "time": null, "prevTime": "4:06.16"},
+  "rules": {"name": "Rules", "icon": "mdi-run", "time": null, "prevTime": "4:06.1"},
   "similarities": {
     "name": "Similarities",
     "icon": "mdi-run",
     "time": null,
-    "prevTime": "17:12.65",
+    "prevTime": "17:12.6",
     "subsplits": {
-      "open": {"name": "Work in public", "icon": "mdi-run", "time": null, "prevTime": "5:48.20"},
-      "experts": {"name": "Don't ask to ask", "icon": "mdi-run", "time": null, "prevTime": "7:12.68"},
-      "labbers": {"name": "Lab rats", "icon": "mdi-run", "time": null, "prevTime": "10:06.29"},
-      "organisers": {"name": "Tournaments", "icon": "mdi-run", "time": null, "prevTime": "11:09.12"},
-      "governance": {"name": "Governance", "icon": "mdi-run", "time": null, "prevTime": "14:25.48"},
+      "open": {"name": "Work in public", "icon": "mdi-run", "time": null, "prevTime": "5:48.2"},
+      "experts": {"name": "Don't ask to ask", "icon": "mdi-run", "time": null, "prevTime": "7:12.6"},
+      "labbers": {"name": "Lab rats", "icon": "mdi-run", "time": null, "prevTime": "10:06.2"},
+      "organisers": {"name": "Tournaments", "icon": "mdi-run", "time": null, "prevTime": "11:09.1"},
+      "governance": {"name": "Governance", "icon": "mdi-run", "time": null, "prevTime": "14:25.4"},
       "hype": {"name": "Hype", "icon": "mdi-run", "time": null, "prevTime": "17:12.65"},
     }
   },
-  "differences": { "name": "Differences", "icon": "mdi-run", "time": null, "prevTime": "22:35.91"},
-  "practice": { "name": "Deliberate Practice", "icon": "mdi-run", "time": null, "prevTime": "39:38.87",
+  "differences": { "name": "Differences", "icon": "mdi-run", "time": null, "prevTime": "22:35.9"},
+  "practice": { "name": "Deliberate Practice", "icon": "mdi-run", "time": null, "prevTime": "39:38.8",
     "subsplits": {
-      "talent": { "name": "Talent and Intelligence", "icon": "mdi-run", "time": null, "prevTime": "25:25.12" },
-      "practice": { "name": "Deliberate Practice", "icon": "mdi-run", "time": null, "prevTime": "33:57.73" },
-      "representation": { "name": "Mental Representations", "icon": "mdi-run", "time": null, "prevTime": "39:38.87" },
+      "talent": { "name": "Talent and Intelligence", "icon": "mdi-run", "time": null, "prevTime": "25:25.1" },
+      "practice": { "name": "Deliberate Practice", "icon": "mdi-run", "time": null, "prevTime": "33:57.7" },
+      "representation": { "name": "Mental Representations", "icon": "mdi-run", "time": null, "prevTime": "39:38.8" },
     }
   },
-  "action": { "name": "Call to Action", "icon": "mdi-run", "time": null, "prevTime": "48:02.55",
+  "action": { "name": "Call to Action", "icon": "mdi-run", "time": null, "prevTime": "48:02.5",
     "subsplits": {
-      "fluency": { "name": "Fluency", "icon": "mdi-run", "time": null, "prevTime": "40:40.43" },
-      "tools": { "name": "Tools", "icon": "mdi-run", "time": null, "prevTime": "43:40.68" },
-      "spaced": { "name": "Spaced Repetition", "icon": "mdi-run", "time": null, "prevTime": "46:43.46" },
-      "feedback": { "name": "Feedback", "icon": "mdi-run", "time": null, "prevTime": "48:02.55" },
+      "fluency": { "name": "Fluency", "icon": "mdi-run", "time": null, "prevTime": "40:40.4" },
+      "tools": { "name": "Tools", "icon": "mdi-run", "time": null, "prevTime": "43:40.6" },
+      "spaced": { "name": "Spaced Repetition", "icon": "mdi-run", "time": null, "prevTime": "46:43.4" },
+      "feedback": { "name": "Feedback", "icon": "mdi-run", "time": null, "prevTime": "48:02.5" },
     }
   },
-  "outro": { "name": "Outro", "icon": "mdi-run", "time": null, "prevTime": "50:00.00" },
+  "outro": { "name": "Outro", "icon": "mdi-run", "time": null, "prevTime": "50:00.0" },
 }
 let currentSplit = $ref("intro")
 const formatTimeMs = (time, digits = 2) => {
-  const date = new Date(time)
+  const date = new Date(time < 0 ? -time : time)
   const milliseconds = date.getUTCMilliseconds()
   return milliseconds.toString().padStart(digits, "0").slice(0, digits)
 }
 const formatTime = (time) => {
   if (time == null) return "00:00:00"
-  const date = new Date(time)
+  // normalise time to positive number
+  const date = new Date(time < 0 ? -time : time)
   const hours = date.getUTCHours()
   const minutes = date.getUTCMinutes()
   const seconds = date.getUTCSeconds()
@@ -56,8 +58,12 @@ const formatTime = (time) => {
 const formatTimeFull = (time) => {
   if (time == null) return "00:00:00"
   return `${formatTime(time)}.${formatTimeMs(time, 1)}`
-  const milliseconds = date.getUTCMilliseconds()
-
+}
+const toTime = (time) => {
+  // return milliseconds from a string like "12:34.56"
+  const [minutes, seconds] = time.split(":")
+  const [secondsInt, secondsDec] = seconds.split(".")
+  return (parseInt(minutes) * 60 + parseInt(secondsInt)) * 1000 + parseInt(secondsDec) * 100
 }
 let startTime = null
 let timer = $ref(0)
@@ -96,20 +102,48 @@ watch($slidev.nav, () => {
     // "." indicates a sub-split
     if ($slidev.nav.route.meta.split.includes(".")) {
       const [split, subSplit] = $slidev.nav.route.meta.split.split(".")
+      if (splits[split].subsplits[subSplit].time != null) {
+          return
+      }
       const splittime = Date.now() - startTime
+      // find the last subsplit that has a time
+      let lastSplit = Object.values(splits[split].subsplits).reverse().find(subSplit => subSplit.time != null)
+      // if this is the first subplit, get the last split time
+      if (lastSplit == null) {
+        lastSplit = Object.values(splits).reverse().find(split => split.time != null) || {time: 0, prevTime: "0:00.00" }
+      }
+      const lastRunSplit = toTime(splits[split].subsplits[subSplit].prevTime) - toTime(lastSplit.prevTime)
+      const thisRunSplit = splittime - lastSplit.time
       splits[split].subsplits[subSplit].time = splittime
+      splits[split].subsplits[subSplit].delta = splits[split].subsplits[subSplit].delta || thisRunSplit - lastRunSplit
       // if this was the last sub-split, set the parent split time
       if (Object.values(splits[split].subsplits).every(subSplit => subSplit.time != null)) {
         splits[split].time = splittime
+        // the delta has to be the sum of all sub-split deltas
+        splits[split].delta = Object.values(splits[split].subsplits).reduce((acc, subSplit) => acc + subSplit.delta, 0)
         currentSplit = Object.keys(splits).find(split => splits[split].time == null)
-        console.log("was the last split, updating currentSplit")
-        console.log(currentSplit)
       } else {
         // currentSplit is the next sub-split in line
         currentSplit = `${split}.${Object.keys(splits[split].subsplits).find(subSplit => splits[split].subsplits[subSplit].time == null)}`
       }
     } else {
-      splits[$slidev.nav.route.meta.split].time = Date.now() - startTime
+      // find last split (not just the key, the actual object)
+      const split = $slidev.nav.route.meta.split
+      if (splits[split].time != null) {
+          return
+      }
+      const splittime = Date.now() - startTime
+      const lastSplit = Object.values(splits).reverse().find(split => split.time != null) || {time: 0, prevTime: "0:00.00"}
+      const lastRunSplit = toTime(splits[split].prevTime) - toTime(lastSplit.prevTime)
+      const thisRunSplit = splittime - lastSplit.time
+      splits[split].time = splittime
+      splits[split].delta = splits[split].delta || thisRunSplit - lastRunSplit
+      console.log(toTime(lastSplit.prevTime))
+      console.log(toTime("0:00.00"))
+      console.log("last split:", lastSplit)
+      console.log("last run's split time", lastRunSplit)
+      console.log("this run's split time", thisRunSplit)
+      console.log("delta:", thisRunSplit - lastRunSplit)
       currentSplit = Object.keys(splits).find(split => splits[split].time == null)
     }
     if (!currentSplit) {
@@ -142,15 +176,15 @@ watch($slidev.nav, () => {
             {{ split.name }}
           </td>
           <td class="timediff">
-            <span v-if="split.time">
-                {{ split.splitDiff }}
+            <span v-if="split.time && split.delta" :class="split.delta < 0 ? 'negative' : 'positive'">
+              <span v-if="split.delta < 0">-</span><span v-else>+</span>{{ formatTime(split.delta) }}
             </span>
           </td>
           <td class="timetotal">
             <span v-if="split.time" class="mdi mdi-check">
-                {{ formatTimeFull(split.time) }}
+                {{ formatTime(split.time) }}
             </span>
-            <span v-else>-</span>
+            <span v-else>{{ split.prevTime.split(".")[0] }}</span>
           </td>
         </tr>
           <tr v-if="split.subsplits && currentSplit && currentSplit.startsWith(code)" v-for="subsplit in Object.values(split.subsplits)" :key="subsplit.name" class="subsplit split">
@@ -161,15 +195,15 @@ watch($slidev.nav, () => {
               {{ subsplit.name }}
             </td>
             <td class="timediff">
-              <span v-if="subsplit.time">
-                  {{ subsplit.splitDiff }}
+              <span v-if="subsplit.time && subsplit.delta" :class="subsplit.delta < 0 ? 'negative' : 'positive'">
+                <span v-if="subsplit.delta < 0">-</span><span v-else>+</span>{{ formatTime(subsplit.delta) }}
               </span>
             </td>
             <td class="timetotal">
               <span v-if="subsplit.time" class="mdi mdi-check">
-                  {{ formatTimeFull(subsplit.time) }}
+                  {{ formatTime(subsplit.time) }}
               </span>
-              <span v-else>-</span>
+              <span v-else>{{ subsplit.prevTime.split(".")[0] }}</span>
             </td>
         </tr>
       </template>
@@ -238,6 +272,12 @@ watch($slidev.nav, () => {
   padding-right: 10px;
   font-family: "timer";
   font-weight: 100;
+}
+#splitlist .timediff .negative {
+  color: #2a9242;
+}
+#splitlist .timediff .positive {
+  color: #9e131a;
 }
 .split .splitname {
   padding-left: 8px
