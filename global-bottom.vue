@@ -1,8 +1,8 @@
 <script setup>
 import { watch } from 'vue'
 const splits = {
-  "intro": {"name": "Intro", "icon": "mdi-home", "time": null, "prevTime": "0:03.8"},
-  //"intro": {"name": "Intro", "icon": "mdi-home", "time": null, "prevTime": "37.8"},
+  //"intro": {"name": "Intro", "icon": "mdi-home", "time": null, "prevTime": "0:03.8"},
+  "intro": {"name": "Intro", "icon": "mdi-home", "time": null, "prevTime": "0:37.8"},
   "definition": {"name": "Speedrunning", "icon": "mdi-run", "time": null, "prevTime": "1:05.7"},
   "rules": {"name": "Rules", "icon": "mdi-run", "time": null, "prevTime": "4:06.1"},
   "similarities": {
@@ -274,7 +274,7 @@ watch($slidev.nav, () => {
   font-weight: 100;
 }
 #splitlist .timediff .negative {
-  color: #2a9242;
+  color: #26a665;
 }
 #splitlist .timediff .positive {
   color: #9e131a;
