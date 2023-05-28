@@ -18,6 +18,10 @@ const props = defineProps({
     type: String,
     default: null,
   },
+  imageCredit: {
+    type: String,
+    default: null,
+  },
   dim: {
     type: Boolean,
     default: true,
@@ -35,5 +39,8 @@ const style = computed(() => handleBackground(props.background, props.dim, props
       </div>
     </div>
     <div style="width: 350px"></div>
+    <div v-if="imageCredit" style="position: absolute; right: 252px; color: white; bottom: 4px">
+      {{ imageCredit }}
+    </div>
   </div>
 </template>

@@ -600,6 +600,7 @@ fluency is a good way to identify what to improve.
 split: action.fluency
 layout: speedimage
 background: /images/posture.png
+imageCredit: "@Nintega-Dario on DeviantArt"
 imageWidth: 500px
 dim: false
 ---
