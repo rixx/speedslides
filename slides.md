@@ -15,7 +15,7 @@ title: testing, testing, is this thing on?
 # testing, is this thing on?
 
 <!--
-Setup. Remember your feet. Remember your larynx
+Setup. "Testing testing is this thing on?" slide
 -->
 
 ---
@@ -29,14 +29,14 @@ layout: cover
 # a speedrunning guide<br> to software development
 
 <!--
-Feet. Larynx.
 
-Thank you for the introduction. Let me be one of the first to welcome you to …
+**First time** Thank you for the introduction. Let me be one of the first to welcome you to DjangoCon Europe this year!
+… oh wait, one more setup thing.
 
-… oh wait, one more setup thing. ***NEXT***
+**Second time** skip
 
+**Third time** skip
 
-**second time**. click through
 
 -->
 ---
@@ -53,10 +53,13 @@ layout: cover
 <!--
 [timer is now visible]
 
-… right. Okay. Everybody ready? Then let's talk about speedrunning. ***NEXT***
+**First time** … right. Okay. Everybody ready? Then let's talk about speedrunning. ***NEXT***
 
 
-**second time**. Thank you, ___, for the introduction, and welcome, everybdoy, to DjangoCon Europe!
+**Second time** Thank you for the introduction, and welcome to DjangoCon Europe.
+
+
+**Third time**. Hi. Welcome!
 
 -->
 ---
@@ -70,12 +73,12 @@ dim: false
 
 … after a short intro, because it is extremely awkward to be standing here without
 any kind of justification, assuming the authority of a keynote speaker, such as it is.
-So let me first off present my CV and my greatest LinkedIn hits. Hmmm, I don't feel a lot
-of enthusiasm at this prospect. Let's start over and cut the useless parts, then.
 
 [RESET]
 
-**second time** I'm Tobias, and I'll be your keynote speaker today.
+**Second time** I'm Tobias, and I'll be your keynote speaker today.
+
+**Third time** I'm Tobi
 
 -->
 
@@ -87,8 +90,13 @@ dim: false
 ---
 
 <!--
-I built pretalx (the tool giving you this conference call for proposals and schedule.
-If you have opinions about that, yell at me about it later). I also ran DjangoCon Europe Heidelberg ***NEXT***
+**First time** I built pretalx (the tool giving you this conference schedule and call for proposals. pretalx also has a
+lot of other capabilities, for example … hm. I sense a certain lack of excitement for an advertisement block. Let's try
+that again.
+
+**Second time** I'm the author of pretalx, an open source conference software
+
+**Third time** I built pretalx
 -->
 
 ---
@@ -99,7 +107,10 @@ dim: false
 ---
 
 <!--
-together with some other lovely people you'll also see on stage here in the coming days.
+**Second time** I also ran DjangoCon Europe in Heidelberg together with some lovely people who you'll see up here in the
+coming days
+
+**Third time** and ran DjangoCon Europe
 -->
 
 ---
@@ -110,7 +121,7 @@ dim: false
 ---
 
 <!--
-I also dislike talking about myself, so if you want to know anything else, you'll find it at my homepage.
+I have a website
 
 -->
 ---
