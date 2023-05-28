@@ -177,7 +177,7 @@ like it devalues the game and misses the point, after all.
 
 But that's a misconception that stems from seeing only that one successful speedrun. Speedrunners arguably spend more
 time on a game than anybody else – beginners start with hundreds of hours, but top level runners have thousands of hours
-running and practicing their game. We'll come back to that later.
+running and practicing their game.
 -->
 ---
 layout: speedimage
@@ -254,6 +254,17 @@ all about leaderboards and competition.
 But, in my opinion, there are a lot of surprising similarities that have shown me software development in a new light
 when I jumped (or stumbled) into speedrunning, and there are some less obvious differences that are very informative.
 
+-->
+
+---
+layout: speedimage
+background: /images/glitch02.png
+imageOrientation: left
+dim: false
+---
+
+<!--
+
 First off: Speedrunning is like open source work, in that everybody shares. You might find that surprising given the
 competitive nature, but it's really frowned upon to hide new strategies to gain an edge over the competition. Glitches
 and tricks are developed by the community collaboratively and shared with everybody freely through the actual runs, but
@@ -263,7 +274,7 @@ to PostgresQL, but we're not going to tell you HOW we do that!"
 ---
 split: similarities.open
 layout: speedimage
-background: /images/glitch02.png
+background: /images/glitch03.png
 imageOrientation: left
 dim: false
 ---
@@ -314,9 +325,9 @@ imageWidth: 740px
 A huge foundation of speedrunning are the labbers. Labbers, in their laboratories, figure out new time saves, glitches, tricks.
 
 On one end of the spectrum they may improve an existing trick to be easier more accessible, whereas at the other end of
-the spectrum they will sit down with RAM inspectors and build exploits that are closer to programming than gameplay. For
+the spectrum they will sit down with memory inspectors and build exploits that are closer to programming than gameplay. For
 those tricks, runners will kill an enemy at a specific position and then die at another position, making sure those
-coordinates are written to RAM and later called on as actual programming instructions.
+coordinates are written to specific memory addresses and later called on as actual programming instructions.
 
 -->
 
