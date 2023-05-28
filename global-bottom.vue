@@ -55,7 +55,7 @@ const formatTime = (time) => {
 }
 const formatTimeFull = (time) => {
   if (time == null) return "00:00:00"
-  return `${formatTime(time)}.${formatTimeMs(time)}`
+  return `${formatTime(time)}.${formatTimeMs(time, 1)}`
   const milliseconds = date.getUTCMilliseconds()
 
 }
