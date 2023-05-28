@@ -216,7 +216,18 @@ dim: false
 imageWidth: 140px
 ---
 <!--
-one or zero stars.
+one or 
+-->
+
+
+---
+layout: speedimage
+background: /images/star-outline.png
+dim: false
+imageWidth: 210px
+---
+<!--
+zero stars.
 
 These runs are increasingly shorter and involve more tricks, and so they have separate leaderboards, as it makes no
 sense to compare a 46 minute 70 star run with a 6 minute 0 star run.
