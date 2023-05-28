@@ -1,45 +1,46 @@
 <script setup>
 import { watch } from 'vue'
 const splits = {
-  "intro": {"name": "Intro", "icon": "mdi-home", "time": null, "splitDiff": -5.4},
-  "definition": {"name": "Speedrunning", "icon": "mdi-run", "time": null},
-  "rules": {"name": "Rules", "icon": "mdi-run", "time": null},
+  "intro": {"name": "Intro", "icon": "mdi-home", "time": null, "prevTime": "37.8"},
+  "definition": {"name": "Speedrunning", "icon": "mdi-run", "time": null, "prevTime": "1:05.7"},
+  "rules": {"name": "Rules", "icon": "mdi-run", "time": null, "prevTime": "4:06.16"},
   "similarities": {
     "name": "Similarities",
     "icon": "mdi-run",
     "time": null,
+    "prevTime": "17:12.65",
     "subsplits": {
-      "open": {"name": "Work in public", "icon": "mdi-run", "time": null},
-      "experts": {"name": "Don't ask to ask", "icon": "mdi-run", "time": null},
-      "labbers": {"name": "Lab rats", "icon": "mdi-run", "time": null},
-      "organisers": {"name": "Tournaments", "icon": "mdi-run", "time": null},
-      "governance": {"name": "Governance", "icon": "mdi-run", "time": null},
-      "hype": {"name": "Hype", "icon": "mdi-run", "time": null},
+      "open": {"name": "Work in public", "icon": "mdi-run", "time": null, "prevTime": "5:48.20"},
+      "experts": {"name": "Don't ask to ask", "icon": "mdi-run", "time": null, "prevTime": "7:12.68"},
+      "labbers": {"name": "Lab rats", "icon": "mdi-run", "time": null, "prevTime": "10:06.29"},
+      "organisers": {"name": "Tournaments", "icon": "mdi-run", "time": null, "prevTime": "11:09.12"},
+      "governance": {"name": "Governance", "icon": "mdi-run", "time": null, "prevTime": "14:25.48"},
+      "hype": {"name": "Hype", "icon": "mdi-run", "time": null, "prevTime": "17:12.65"},
     }
   },
-  "differences": { "name": "Differences", "icon": "mdi-run", "time": null },
-  "practice": { "name": "Deliberate Practice", "icon": "mdi-run", "time": null,
+  "differences": { "name": "Differences", "icon": "mdi-run", "time": null, "prevTime": "22:35.91"},
+  "practice": { "name": "Deliberate Practice", "icon": "mdi-run", "time": null, "prevTime": "39:38.87",
     "subsplits": {
-      "talent": { "name": "Talent and Intelligence", "icon": "mdi-run", "time": null },
-      "practice": { "name": "Deliberate Practice", "icon": "mdi-run", "time": null },
-      "representation": { "name": "Mental Representations", "icon": "mdi-run", "time": null },
+      "talent": { "name": "Talent and Intelligence", "icon": "mdi-run", "time": null, "prevTime": "25:25.12" },
+      "practice": { "name": "Deliberate Practice", "icon": "mdi-run", "time": null, "prevTime": "33:57.73" },
+      "representation": { "name": "Mental Representations", "icon": "mdi-run", "time": null, "prevTime": "39:38.87" },
     }
   },
-  "action": { "name": "Call to Action", "icon": "mdi-run", "time": null,
+  "action": { "name": "Call to Action", "icon": "mdi-run", "time": null, "prevTime": "48:02.55",
     "subsplits": {
-      "fluency": { "name": "Fluency", "icon": "mdi-run", "time": null },
-      "tools": { "name": "Tools", "icon": "mdi-run", "time": null },
-      "spaced": { "name": "Spaced Repetition", "icon": "mdi-run", "time": null },
-      "feedback": { "name": "Feedback", "icon": "mdi-run", "time": null },
+      "fluency": { "name": "Fluency", "icon": "mdi-run", "time": null, "prevTime": "40:40.43" },
+      "tools": { "name": "Tools", "icon": "mdi-run", "time": null, "prevTime": "43:40.68" },
+      "spaced": { "name": "Spaced Repetition", "icon": "mdi-run", "time": null, "prevTime": "46:43.46" },
+      "feedback": { "name": "Feedback", "icon": "mdi-run", "time": null, "prevTime": "48:02.55" },
     }
   },
-  "outro": { "name": "Outro", "icon": "mdi-run", "time": null },
+  "outro": { "name": "Outro", "icon": "mdi-run", "time": null, "prevTime": "50:00.00" },
 }
 let currentSplit = $ref("intro")
-const formatTimeMs = (time) => {
+const formatTimeMs = (time, digits = 2) => {
   const date = new Date(time)
   const milliseconds = date.getUTCMilliseconds()
-  return milliseconds.toString().padStart(2, "0").slice(0, 2)
+  return milliseconds.toString().padStart(digits, "0").slice(0, digits)
 }
 const formatTime = (time) => {
   if (time == null) return "00:00:00"
