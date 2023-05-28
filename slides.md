@@ -153,6 +153,9 @@ dim: false
 
 
 <!--
+
+[Target time: 1:40]
+
 When you first see a speedrun, it's usually one of a game you've played, either recently or in your childhood. Seeing
 your first speedrun of a game you know is a jarring event: it's rapid, it's hard to follow, and often looks very weird
 or glitchy.
@@ -219,6 +222,9 @@ dim: false
 ---
 
 <!--
+
+[Target time: 4:30]
+
 By first appearances, speedrunning has very little in common with software development. It's just a weird way to play a
 game after all, nothing like the serious and time-honoured tradition of our craft! It requires twitch reflexes and is
 all about leaderboards and competition.
@@ -241,6 +247,9 @@ dim: false
 ---
 
 <!--
+
+[Target time: 5:40]
+
 An extension of this openness is that there is help readily available to newcomers.
 
 Be it on the Django forum, or a speedrunning Discord, there are experts with years of experience around who enjoy
@@ -262,6 +271,9 @@ imageWidth: 740px
 ---
 
 <!--
+
+[Target time: 7:20]
+
 The forum illustrates another thing: Both software development and speedrunning have lots of non-obvious roles.
 
 People only see the lone heroes, the stars, top runners, heroic lead developers.
@@ -315,6 +327,9 @@ split: similarities.labbers
 ---
 
 <!--
+
+[Target time: 10]
+
 And there are roles even less obvious and even more in the shadows:
 
 Where there are leaderboards, there are competitions. In speedrunning, those are showcase races and tournaments.
@@ -334,6 +349,9 @@ split: similarities.organisers
 ---
 
 <!--
+
+[Target time: 11]
+
 And, coming back to the forum, every growing group of people sooner or later needs governance. Both speedrunners and software developers have
 a social and a technical kind of governance. 
 
@@ -359,6 +377,9 @@ split: similarities.governance
 ---
 
 <!--
+
+[Target time: 14:30]
+
 And, of course, we all have to deal with hot new revolutionary technology changing what we do and we know. Speedrunners,
 even for very old games, have to adjust to new tricks and exploits constantly, just as we have to look at new language
 and framework features and think carefully if those are useful to us. That's really hard to do! At first it's very
@@ -379,6 +400,9 @@ split: similarities.hype
 ---
 
 <!--
+
+[Target time: 17]
+
 And that's it for the similarities between speedrunning and software development. (I lie – there's much more!
 Tool-assisted speedruns, bad posture and hand pain rather than learning from musicians who have solutions to those and much more, but we don't have time!)
 
@@ -443,6 +467,9 @@ background: /images/sky.jpg
 <h5 v-click="1" style="margin-top: 1em"> Terry Pratchett, The Wee Free Men</h5>
 
 <!--
+
+[Target time: 22:30]
+
 And practice is what I really want to talk about. I just used speedrunning to draw you in. hah!
 
 the past decades have shown us much more how practice works
@@ -488,6 +515,9 @@ split: practice.talent
 </ul>
 
 <!--
+
+[Target time: 25]
+
 There have been a lot of studies and papers written about all of this in the past decades, and they have identified
 three big components of becoming an expert in any given field.
 
@@ -549,6 +579,9 @@ dim: false
 
 <!--
 
+[Target time: 34]
+
+
 Mental Representations are what it says on the tin: how you think about your subject matter, or more particularly: how
 efficiently you can access your mental version of what you're dealing with, in order to compare it to reality.
 I have a chess example and a music example again:
@@ -591,6 +624,9 @@ dim: false
 
 <!--
 
+[Target time: 39:30]
+
+
 The main thing we're aiming for with these large mental representations is fluency. If good mental representations are
 the invisible reason behind expertise, then fluency is the visible symptom. Think about multipliation tables: Nobody
 likes learning them, but knowing how to multiply small numbers without thinking is dead useful. Aiming at effortless
@@ -606,6 +642,9 @@ dim: false
 ---
 
 <!--
+
+[Target time: 40]
+
 And the best way to build fluency in software development, arguably, is by being fluent in the tools you use. Our daily
 tasks are nowhere near as repetitive as a speedrun, but our use of our tools is, and anything that's repetitive can be
 practiced and optimised.
@@ -629,6 +668,9 @@ dim: false
 ---
 
 <!--
+
+[Target time: 43:30]
+
 The next thing that I want to advocate for learning is your language, your libraries, your framework. Looking things up
 in the Python docs, or the Django docs, or StackOverflow is the opposite of fluency: it breaks flow, and it's
 frustrating. 
@@ -661,6 +703,9 @@ imageOrientation: bottom
 <h1 class="text-center">Build Feedback Loops</h1>
 
 <!--
+
+[Target time: 46:30]
+
 And finally: build tight feedback loops in whatever you want to learn or improve or do.
 Notice when you don't have good feedback loops. What kind of feedback loops? That depends on the situation, honestly.
 I mentioned pair programming, but when that's not an option, there are a few other things to try:
@@ -677,6 +722,9 @@ split: action.feedback
 
 
 <!--
+
+[Target time: 48]
+
 I wish I had time to talk about AI and Copilot and how they make the deep, deliberate kind of learning harder, by making
 the shallow kind easier. But no time – if you want to talk about that, find me later.
 -->
