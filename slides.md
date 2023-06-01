@@ -73,6 +73,7 @@ dim: false
 
 … after a short intro, because it is extremely awkward to be standing here without
 any kind of justification, assuming the authority of a keynote speaker, such as it is.
+So, hi, I'm Tobias.
 
 [RESET]
 
@@ -90,9 +91,11 @@ dim: false
 ---
 
 <!--
-**First time** I built pretalx (the tool giving you this conference schedule and call for proposals. pretalx also has a
-lot of other capabilities, for example … hm. I sense a certain lack of excitement for an advertisement block. Let's try
-that again.
+
+**First time** I built pretalx. pretalx is the tool you're using to look at this conference's schedule, and, if you're
+up on stage at some point, to submit your talk in the first place. pretalx also has a lot of other capabilities, for
+example … hm. I sense a certain lack of excitement for this product placement block. Let's try that again, without the
+ad.
 
 **Second time** I'm the author of pretalx, an open source conference software
 
@@ -108,7 +111,9 @@ dim: false
 
 <!--
 **Second time** I also ran DjangoCon Europe in Heidelberg together with some lovely people who you'll see up here in the
-coming days
+coming days. 
+
+Come to think of it, this part can be a bit faster too. Let me give this one final attempt.
 
 **Third time** and ran DjangoCon Europe
 -->
@@ -135,24 +140,30 @@ split: intro
 </h1>
 
 <ul style="list-style-type: none">
-<v-click><li> going very very fast</li> </v-click>
-<v-click><li> in video games</li></v-click>
+<v-click><li> playing video games</li> </v-click>
+<v-click><li> very very fast</li> </v-click>
 <v-click><li> ( to reach a goal ) </li></v-click>
 <v-click> <li> (( within specific rules ))</li> </v-click>
 </ul>
 
 <!--
+and I want to talk about speedrunning today. Now that's more like it!
+
 what is speedrunning?  and how does it apply to software development?
 
 okay, first off, who here has heard of speedrunning before?
 
 …
 
-ah. okay, in that case we can go a bit faster:
+alright, in that case, I'll give you the speedrun of the definition:
 
 
-speedrunning is playing games really fast, or rather, playing a game with the intent to reach a set
-objective as fast as possible within certain rules.
+speedrunning is
+playing video games
+really fast,
+with the intent to reach a set objective
+as fast as possible within certain rules
+
 -->
 
 ---
