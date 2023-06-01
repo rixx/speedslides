@@ -138,12 +138,6 @@ watch($slidev.nav, () => {
       const thisRunSplit = splittime - lastSplit.time
       splits[split].time = splittime
       splits[split].delta = splits[split].delta || thisRunSplit - lastRunSplit
-      console.log(toTime(lastSplit.prevTime))
-      console.log(toTime("0:00.00"))
-      console.log("last split:", lastSplit)
-      console.log("last run's split time", lastRunSplit)
-      console.log("this run's split time", thisRunSplit)
-      console.log("delta:", thisRunSplit - lastRunSplit)
       currentSplit = Object.keys(splits).find(split => splits[split].time == null)
     }
     if (!currentSplit) {
